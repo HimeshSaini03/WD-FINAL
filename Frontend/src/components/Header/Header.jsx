@@ -223,7 +223,7 @@ const Header = () => {
                                                 : "nav__item"
                                         }
                                     >
-                                        {"Sell Car"}
+                                        {"Admin Dashboard"}
                                     </NavLink>
                                 </div>
                             )}
