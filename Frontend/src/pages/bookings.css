@@ -1,0 +1,88 @@
+.vertical-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vertical-table th,
+  .vertical-table td {
+      border: 1px solid #ddd;
+      padding: 12px 15px;
+      text-align: left;
+  }
+  
+  .vertical-table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+  }
+  
+  .vertical-table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+  }
+  
+  .vertical-table tbody tr:hover {
+      background-color: #e9e9e9;
+  }
+  
+  .vertical-table td a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  
+  .vertical-table td a:hover {
+      text-decoration: underline;
+  }
+  
+  .alert.alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+      border-color: #f5c6cb;
+  }
+  
+  .booking-item {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #ffffff;
+  }
+  
+  .booking-item table {
+      border-radius: 5px;
+      overflow: hidden;
+  }
+  
+  .booking-item th,
+  .booking-item td {
+      border-radius: 5px;
+  }
+  
+  .booking-item th {
+      border: 1px solid #e0e0e0;
+  }
+  
+  .login-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  .login-message {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White card background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Dark text */
+  }
+  

@@ -1,0 +1,104 @@
+.slider__item {
+  max-width: 90%; 
+  height: 600px;
+  margin: 0 auto; /* Center the slider horizontally */
+  margin-top: 100px; /* Place it lower on the page */
+  margin-left: 75px;
+  margin-bottom: 0px;
+  border: 2px solid #dcdcdc; /* Plain border */
+  border-radius: 10px; /* Slightly rounded edges */
+  overflow: hidden; /* Ensure no content overflows the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+}
+
+.slider__item-01 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/slider-img/avis-au-thumbnail-x5-600x300.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-02 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/slider-img/dubai-lifestyle-luxury-cars.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item-03 {
+  background: linear-gradient(rgba(0, 13, 107, 0.5), rgba(0, 13, 107, 0.5)),
+    url("../assets/all-images/slider-img/slider-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__slider {
+  overflow: hidden;
+}
+
+.slider__content {
+  padding-top: 200px; /* Center content vertically */
+  text-align: center; /* Center text horizontally */
+}
+
+.slider__content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+.reserve__btn {
+  background: #fff !important;
+  color: #000d6b !important;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.reserve__btn a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000d6b;
+}
+
+.reserve__btn:hover {
+  background: #000d6b;
+  color: #fff;
+  transition: background 0.3s, color 0.3s; /* Smooth hover transition */
+}
+
+@media only screen and (max-width: 992px) {
+  .slider__item {
+    height: 500px;
+    max-width: 95%;
+  }
+
+  .slider__content {
+    padding-top: 150px;
+  }
+
+  .slider__content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider__item {
+    height: 400px;
+  }
+
+  .slider__content {
+    padding-top: 100px;
+  }
+
+  .slider__content h1 {
+    font-size: 1.8rem;
+  }
+}

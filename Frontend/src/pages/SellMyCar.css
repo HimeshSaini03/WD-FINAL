@@ -1,0 +1,94 @@
+/* SellMyCar.css */
+.sell-my-car {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li.active,
+  .sidebar ul li:hover {
+    background-color: #495057;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .profile,
+  .your-cars {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .profile form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .profile form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile form button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile form button:hover {
+    background-color: #e0a800;
+  }
+  
+  .your-cars ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .your-cars ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .your-cars button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .your-cars button:hover {
+    background-color: #218838;
+  }
+  
