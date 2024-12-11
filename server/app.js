@@ -18,7 +18,7 @@ app.use('/api/contact', require('./routes/contact'));
 app.use('/api/book', require('./routes/book'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/cars', upload.single('file'), require('./routes/cars'));
-app.use('api/blog' , require('./routes/blogs'));
+app.use('/api/blog' , require('./routes/blogs'));
 
 console.log("Server running 2...");
 

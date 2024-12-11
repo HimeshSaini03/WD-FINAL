@@ -8,6 +8,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [admin, setAdmin] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const findUserAndAdmin = (decoded, data) => {
         console.log(decoded);
@@ -27,14 +28,18 @@ export const AuthProvider = ({ children }) => {
 
         const data = token_data ? JSON.parse(token_data) : null;
 
+        setLoading(true);
+
         if (data && data.token) {
             const decoded = jwt_decode(data.token); // Correct usage of jwt_decode
             console.log("Decoded", decoded);
             setUser(decoded);
             findUserAndAdmin(data, decoded);
+            setLoading(false);
         } else {
             setUser(null);
             setAdmin(null);
+            setLoading(false);
         }
     }, []);
 
@@ -64,27 +69,19 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    /*const signup = async (username, email, password) => {
-    const response = await fetch('http://localhost:3000/api/auth/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, email, password }),
-    });
-    const data = await response.json();
-    if (data.token) {
-      localStorage.setItem('token', data.token);
-      const decoded = jwt_decode(data.token);  // Correct usage of jwt_decode
-      setUser(decoded);
-    }
-  };*/
-    const signup = async (username, email, password ,authority) => {
+    const signup = async (username, email, password, authority) => {
         try {
             const response = await fetch(
                 "http://localhost:3000/api/auth/signup",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ username, email, password, authority }),
+                    body: JSON.stringify({
+                        username,
+                        email,
+                        password,
+                        authority,
+                    }),
                 }
             );
 
@@ -112,28 +109,6 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    // const signup = async (username, email, password, authority) => {
-    //     try {
-    //       const response = await fetch("http://localhost:3000/api/auth/signup", {
-    //         method: 'POST',
-    //         headers: {
-    //           'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ username, email, password, authority }),
-    //       });
-      
-    //       const data = await response.json();
-    //       if (response.ok) {
-    //         setUser(data);
-    //         return data;
-    //       } else {
-    //         return { error: data.error };
-    //       }
-    //     } catch (error) {
-    //       return { error: 'Signup failed. Please try again.' };
-    //     }
-    //   };
-/////////////////////////////      
 
     const sendMessage = async (name, email, message) => {
         try {
@@ -165,7 +140,7 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider
-            value={{ sendMessage, admin, user, login, signup, logout }}
+            value={{ sendMessage, admin, user, login, signup, logout, loading }}
         >
             {children}
         </AuthContext.Provider>
